@@ -26,11 +26,12 @@ pip3 install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 
 3. app.py文件内输入joinquant的account info
 ```
-# 此处深入聚宽账号和密码
+# 此处输入聚宽账号和密码 
+# 如果没有jqdatasdk权限 可以从这里申请 https://www.joinquant.com/default/index/sdk
 jqdatasdk.auth('聚宽账号', '聚宽密码')
 ```
 
-4. 输入python3 app.py 打开 http://localhost:5000/ 
+4. 输入python3 app.py 打开 http://127.0.0.1:5000/
 ```
 python3 app.py
 ```
