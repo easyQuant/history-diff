@@ -7,7 +7,7 @@ from datetime import datetime, timedelta
 
 app = Flask(__name__)
 
-# 此处深入聚宽账号和密码
+# 此处输入聚宽账号和密码
 jqdatasdk.auth('聚宽账号', '聚宽密码')
 
 g = {
