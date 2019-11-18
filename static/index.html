@@ -1,0 +1,81 @@
+<html>
+    <head>
+		<!-- import CSS -->
+		  <!-- <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css"> -->
+		  <link rel="stylesheet" href="./static/element-ui.css" >
+		  <link rel="stylesheet" href="./static/index.css" >
+    </head>
+    <body>
+
+			<div id="app" style="width: calc(100% - 40px);padding: 20px;" >
+				<el-row :gutter="20">
+					<el-col :span="18" >
+						<div class="grid-content bg-purple">
+							<h3>分时详情</h3>
+							<div id="mountNode"></div>
+						</div>
+					</el-col>
+					<el-col :span="6" >
+						<div class="grid-content bg-purple">
+							<div style="width: 100%;" >
+								<h3>筛选条件</h3>
+								<div style="padding-bottom: 20px;" >
+									<el-input 
+										type="textarea"
+										:rows="2"
+										:key="index"
+										placeholder="股票代码" 
+										v-model="stocks" 
+									></el-input>
+								</div>
+								<!-- <div v-for="(stock, index) in stockList" style="padding-bottom: 20px;" >
+									<label class="el-form-item__label" style="width: 80px;text-align: left;">股票代码</label>
+									
+								 	<div style="display: inline-block;" >
+										
+
+										<el-autocomplete
+											class="inline-input"
+											v-model="stock.code" 
+											:fetch-suggestions="querySearch"
+											placeholder="股票代码"
+											:trigger-on-focus="false"
+											@select="handleSelect"
+										>
+
+											<template slot-scope="{ item }">
+												<div class="name"> {{ item.value }} </div>
+												<span class="addr"> {{ item.address }} </span>
+											</template>
+										</el-autocomplete>
+									</div>
+								</div> -->
+							</div>
+
+							<div style="width: 100%;padding-bottom: 20px;" >
+								<label class="el-form-item__label" style="width: 80px;text-align: left;">选择日期</label>
+								<el-date-picker
+									v-model="date"
+									type="date"
+									placeholder="下一个交易日" >
+								</el-date-picker>
+							</div>
+
+							<div style="width: 100%;padding-bottom: 20px;text-align: right;" >
+								<el-button @click="add()">添加标的</el-button>
+								<el-button @click="submit()">确定</el-button>
+							</div>
+						</div>
+					</el-col>
+				</el-row>
+			</div>
+
+			<script src="./static/vue.js" ></script>
+			<script src="./static/element-ui.js" ></script>
+			<script src="./static/axios.min.js" ></script>
+			<script src="./static/g2.min.js" ></script>
+			<script src="./static/data-set.min.js" ></script>
+			<script src="./static/moment.js" ></script>
+			<script src="./static/index.js" ></script>
+    </body>
+</html>

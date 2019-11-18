@@ -1,0 +1,2 @@
+Flask==1.1.1
+jqdatasdk==1.7.6
