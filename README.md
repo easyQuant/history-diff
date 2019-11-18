@@ -15,7 +15,7 @@ https://github.com/easyQuant/trade-api
 
 1. 下载项目
 ```
-git clone https://github.com/easyQuant/history-stock-diff.git
+git clone https://github.com/easyQuant/history-diff.git
 ```
 
 2. 安装python依赖
